@@ -1,6 +1,6 @@
 import {FC,ReactElement} from  'react'
 import {Grid} from '@mui/material'
-import {Profile} from '../profile/Profile'
+import Profile from '../profile/Profile'
 const Sidebar:FC = ():ReactElement=>{
     return(
         <>
@@ -13,14 +13,14 @@ const Sidebar:FC = ():ReactElement=>{
             right:0,
             top:0,
             width:'100%',
-            background:'background paper',
+            backgroundColor:'background.paper',
             display:'flex',
             justifyContent:'center',
             flexDirection:'column',
             alignItems:'center'
         }}
         >
-            <Profile/>
+            <Profile name = 'Kukde'/>
         </Grid>
         </>
     )
