@@ -1,6 +1,10 @@
 import React,{FC,ReactElement} from 'react'
 import { Avatar,Box,Typography } from '@mui/material'
-export const TaskCounter : FC = ():ReactElement =>{
+import { Status } from '../components/createTaskForm/enum/Status'
+import { emitCorrectBorderColor } from './helpers/emitCorrectBorder'
+import { emitCorrectLabel } from './helpers/emitCorrectLabel'
+export const TaskCounter : FC = (props):ReactElement =>{
+    const {status = Status.completed , count = 0} = props
 return(
     <>
     <Box
@@ -16,10 +20,10 @@ return(
             width:'96px',
             height:'96px',
             marginBottom:'16px',
-            borderColor:'warning.light'
+            borderColor:`${emitCorrectBorderColor(status)}`
         }}
         >
-            <Typography color={'#fffff'} variant='h4' >10</Typography>
+            <Typography color={'#fffff'} variant='h4' >{count}</Typography>
         </Avatar>
        
             <Typography
@@ -27,7 +31,9 @@ return(
             fontWeight='bold'
             fontSize={'20px'}
             variant='h5'
-            >Subtitle</Typography>
+            >
+                {emitCorrectLabel(status)}
+            </Typography>
        
 
     </Box>
