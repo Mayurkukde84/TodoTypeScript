@@ -1,21 +1,27 @@
-import {FC,ReactElement} from 'react';
-import { Switch,Box,Button, FormControlLabel } from '@mui/material';
-export const TaskFooter:FC = ():ReactElement =>{
-    return(
-        <Box
-        display={'flex'}
-        justifyContent={'center'}
-        alignItems='center'
-        mt={4}
-        >
-            <FormControlLabel label="In Progress" control={<Switch color='warning'/>} />
+import { FC, ReactElement } from "react";
+import { Switch, Box, Button, FormControlLabel } from "@mui/material";
+import { ITaskFooter } from "./interfaces/ITaskFooter";
+export const TaskFooter: FC<ITaskFooter> = (props): ReactElement => {
+  const {
+    onStatusChange = (e) => console.log(e),
+    onClick = (e) => console.log(e),
+  } = props;
+  return (
+    <Box display={"flex"} justifyContent={"center"} alignItems="center" mt={4}>
+      <FormControlLabel
+        label="In Progress"
+        control={<Switch  onChange={(e) => onStatusChange(e)} color='warning' />}
+      />
 
-        <Button
-        variant='contained'
-        color='success'
-        size='small'
-        sx={{color:'#ffffff'}}
-        >Mark Complete</Button>
-        </Box>
-    )
-}
+      <Button
+        variant="contained"
+        color="success"
+        size="small"
+        sx={{ color: "#ffffff" }}
+        onClick={(e)=>onClick(e)}
+      >
+        Mark Complete
+      </Button>
+    </Box>
+  );
+};
