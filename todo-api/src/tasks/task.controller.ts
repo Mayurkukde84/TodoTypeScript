@@ -8,7 +8,7 @@ import { validationResult } from 'express-validator';
 
 
 class TasksController {
-  //this is method for the get routes
+  //this is method for the get routess
   public async getAll(
     req: Request,
     res: Response,
