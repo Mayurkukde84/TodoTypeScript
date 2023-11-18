@@ -31,7 +31,7 @@ const {name} = props
           {`Welcome, ${name}`}
       </Typography>
       <Typography variant="body1" color="text.primary">
-          This is your personal tasks manager
+          This is your personal tasks manage
       </Typography>
     </Box>
   );
