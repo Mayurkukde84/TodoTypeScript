@@ -7,9 +7,10 @@ const Sidebar:FC = ():ReactElement=>{
         <>
         <Grid
         item
+      
         md={4}
         sx={{
-            height:'100vh',
+            height:'auto',
             position:'fixed',
             right:0,
             top:0,
@@ -19,6 +20,7 @@ const Sidebar:FC = ():ReactElement=>{
             justifyContent:'center',
             flexDirection:'column',
             alignItems:'center',
+           
         
         }}
         >

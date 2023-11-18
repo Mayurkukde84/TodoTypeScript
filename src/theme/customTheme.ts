@@ -7,6 +7,7 @@ export const customTheme: ThemeOptions = createTheme({
             light: 'rgba(168, 85, 247, 0.80)',
             main: 'rgba(168, 85, 247, 0.65)',
             dark: 'rgba(168, 85, 247, 0.28)',
+            
         },
         background: {
             paper: '#151515',
