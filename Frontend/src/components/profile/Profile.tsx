@@ -18,9 +18,8 @@ const {name} = props
       <Avatar
         sx={{
           width: "96px",
-          height: "96px",
-          backgroundColor: "primary.main",
-          marginBottom: "16px",
+          height: "86px",
+          backgroundColor: "primary.main"
         }}
       >
         <Typography variant="h4" color="text.primary">

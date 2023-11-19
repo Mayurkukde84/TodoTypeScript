@@ -10,7 +10,7 @@ const Sidebar:FC = ():ReactElement=>{
       
         md={4}
         sx={{
-            height:'auto',
+            height:'100vh',
             position:'fixed',
             right:0,
             top:0,
@@ -20,6 +20,7 @@ const Sidebar:FC = ():ReactElement=>{
             justifyContent:'center',
             flexDirection:'column',
             alignItems:'center',
+          
            
         
         }}

@@ -4,12 +4,13 @@ import { DataSource } from 'typeorm';
 import cors from 'cors';
 import { Task } from './src/tasks/task.entity';
 import { taskRouter } from './src/tasks/tasks.router';
+import morgan from 'morgan';
 const app: Express = express();
 dotenv.config();
 
 app.use(express.json());
 app.use(cors());
-
+app.use(morgan('dev'));
 const PORT = process.env.PORT;
 //Create Database connections
 export const AppDataSource = new DataSource({
