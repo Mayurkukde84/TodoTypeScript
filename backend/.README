@@ -1,1 +1,15 @@
 npm init --yes
+npm i express
+npm i -D typescript @types/express @types/node
+tsc --init
+
+//we have to change or enabled or disable in a tsconfig.json file
+
+npm i dotenv
+npm i -D nodemon ts-node
+npm i eslint --save-dev
+npx eslint --init  //to genearate eslint config file
+npm -D eslint-config-prettier eslint-plugin-import eslint-plugin-prettier prettier
+
+npm install typeorm reflect-metadata mysql2
+npm i cors @types/cors
